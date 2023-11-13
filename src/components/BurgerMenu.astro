@@ -1,0 +1,44 @@
+---
+import "../css/style.css";
+---
+
+<section class="burgermenu">
+  <span class="line_1"></span>
+  <span class="line_2"></span>
+  <span class="line_3"></span>
+</section>
+
+<style>
+  span {
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .burgermenu {
+    padding: 1rem;
+  }
+
+  .line_1,
+  .line_2,
+  .line_3 {
+    background-color: grey;
+    border-radius: 5rem;
+  }
+
+  .burgermenu.active .line_2 {
+    opacity: 0;
+  }
+
+  .burgermenu.active .line_1 {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burgermenu.active .line_3 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
+
+<script src="../js/script.js"></script>

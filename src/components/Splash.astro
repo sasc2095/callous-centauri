@@ -1,0 +1,81 @@
+---
+import "../css/style.css";
+---
+
+<section>
+  <div class="container">
+    <img src="/splash.webp" alt="splash billede" />
+    <div class="content">
+      <h1>CA Studiepartner hjælper dig gennem studiet så du får den bedste start på dit karriereliv</h1>
+      <p>
+        Med CA får du som studerende adgang til rabatter, billige forsikringer og advokathjælp. Det er helt gratis at være medlem, og melder du dig ind 1 år inden forventet studieophør, får du adgang
+        til dagpenge fra første ledighedsdag.
+      </p>
+      <button class="member">Bliv Medlem</button>
+      <button class="read_more">Læs mere</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    top: 0;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 1rem;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .content {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 0 0 30px 0;
+  }
+  h1 {
+    padding: 2rem 2rem 1rem 2rem;
+    color: #e6e6e6;
+  }
+
+  p {
+    padding: 0 2rem 1rem 2rem;
+    color: #e6e6e6;
+  }
+  button {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    background-color: #5e554a;
+    box-shadow: 0 0.6px grey;
+  }
+
+  @media (max-width: 599px) {
+    .content {
+      width: 60%;
+    }
+    h1 {
+      font-size: medium;
+      padding: 1rem 1rem 1rem 1rem;
+    }
+    p,
+    .read_more {
+      display: none;
+    }
+    .member {
+      padding: 8px;
+      font-size: small;
+      width: 10rem;
+      display: grid;
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import "../css/style.css";
+const { header, text } = Astro.props;
+---
+
+<article>
+  <div class="ambassador">
+    <slot />
+    <h4>{header}</h4>
+    <p>{text}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    article {
+      padding: 1rem 1rem;
+    }
+  }
+</style>

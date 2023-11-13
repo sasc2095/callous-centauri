@@ -1,0 +1,71 @@
+---
+import "../css/style.css";
+import BurgerMenu from "./BurgerMenu.astro";
+import BurgerDropDown from "./BurgerDropDown..astro";
+import SearchBar from "./SearchBar.astro";
+---
+
+<nav>
+  <button id="eng">EN</button>
+  <a class="login" href="/"><img src="/public/SVG/login.svg" />Mit CA</a>
+  <a id="logo" href="/"> <img src="../../public/SVG/CA_logo.svg" alt="CA studiepartner logo" /></a>
+
+  <SearchBar />
+  <article>
+    <BurgerMenu />
+    <BurgerDropDown />
+  </article>
+</nav>
+
+<style>
+  .login {
+    width: auto;
+    height: 3rem;
+    position: relative;
+    left: -4rem;
+    display: flex;
+    flex-direction: row;
+    object-fit: contain;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  #eng {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    position: relative;
+    left: 6rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: "Nexa";
+    color: #5e554a;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    align-content: center;
+  }
+  #logo {
+    width: 20rem;
+    height: 3rem;
+  }
+
+  @media (max-width: 599px) {
+    .login,
+    #eng {
+      display: none;
+    }
+    #logo {
+      height: 4rem;
+      width: 100%;
+    }
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

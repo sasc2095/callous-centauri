@@ -1,0 +1,33 @@
+---
+import "../css/style.css";
+const { header, text } = Astro.props;
+---
+
+<div class="grid_1_1">
+  <div class="grid1">
+    <h2>{header}</h2>
+    <p>{text}</p>
+    <button>Læs mere</button>
+  </div>
+  <slot />
+</div>
+
+<style>
+  .grid_1_1 {
+    padding: 2rem;
+    align-items: center;
+  }
+
+  p {
+    line-height: 1.6;
+    padding-bottom: 2rem;
+  }
+  @media (min-width: 600px) {
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 1rem;
+      gap: 3rem;
+    }
+  }
+</style>

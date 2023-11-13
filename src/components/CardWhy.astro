@@ -1,0 +1,25 @@
+---
+const { header } = Astro.props;
+---
+
+<article>
+  <h2>{header}</h2>
+  <div class="box">
+    <h3></h3>
+    <slot />
+  </div>
+</article>
+
+<style>
+  article {
+    padding: 2rem;
+    display: grid;
+    align-items: center;
+  }
+
+  @media (max-width: 599px) {
+    article {
+      margin: 1rem 1rem 1rem 1rem;
+    }
+  }
+</style>
