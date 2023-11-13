@@ -1,16 +1,94 @@
 ---
+import Header from "../components/Header.astro";
 
+import Splash from "../components/Splash.astro";
+import CardRead from "../components/CardRead.astro";
+import CardWhy from "../components/CardWhy.astro";
+import CardAmbassador from "../components/CardAmbassador.astro";
+import SoMe from "../components/SoMe.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <Header />
+  <main>
+    <Splash />
+
+    <CardRead
+      header="Bliv Gratis Medlem"
+      text={`Som studerende er du gratis medlem af CAs a-kasse og ydelser, derudover får du CAs advokathjælp.  
+			CA Advokathjælp er gratis for studerende og kan hjælpe dig med at tjekke kontrakten på dit studiejob og juridisk rådgivning af professionelle advokater. `}
+    >
+      <video class="member_video" controls autoplay loop> <source src="../../public/animation_member.webm" /></video>
+    </CardRead>
+
+    <CardRead header="Gode råd og sparing til at kickstarte din karriere">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/iBs5h0kmDrU?si=BEMTdZUUNscvTHtd"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </CardRead>
+
+    <CardRead
+      header="Medlemsfordele og rabatter"
+      text="Som medlem af CA får du adgang til gratis kurser i Adobe programmer, kontante rabatter, billige forsikringer og meget mere. Scan QR-koden og læs mere."
+    >
+      <video class="member_video" controls autoplay loop> <source src="../../public/phone_search.webm" /></video>
+    </CardRead>
+
+    <article>
+      <h2 class="whyCA">Hvorfor CA?</h2>
+
+      <div class="grid_1_1_1">
+        <CardWhy header="A-kasse som studerende?">
+          <video class="member_video" controls autoplay loop> <source src="../../public/reminder.webm" /></video>
+        </CardWhy>
+        <CardWhy header="Hvad tilbyder CA?">
+          <video class="member_video" controls autoplay loop muted> <source src="../../public/tiktok.webm" /></video>
+        </CardWhy>
+        <CardWhy header="Bliv ambassadør">
+          <video class="member_video" controls autoplay loop><source src="../../public/become.webm" /></video>
+        </CardWhy>
+      </div>
+    </article>
+    <article>
+      <h2>Mød vores ambassadører</h2>
+
+      <div class="grid_1_1_1_1">
+        <CardAmbassador header="Monica" text="Ambassadør på KEA">
+          <img src="../../public/monica1.jpg" alt="picture" />
+        </CardAmbassador>
+        <CardAmbassador header="Sascha" text="Ambassadør på KEA">
+          <img src="../../public/sascha1.jpg" alt="picture" />
+        </CardAmbassador>
+        <CardAmbassador header="Monica" text="Ambassadør på KEA">
+          <img src="../../public/monica2.jpg" alt="picture" />
+        </CardAmbassador>
+        <CardAmbassador header="Sascha" text="Ambassadør på KEA">
+          <img src="../../public/sascha3.jpg" alt="picture" />
+        </CardAmbassador>
+      </div>
+    </article>
+    <SoMe />
+  </main>
+  <footer>
+    <Footer />
+  </footer>
+
+  <style>
+    h2 {
+      display: grid;
+      justify-items: center;
+      padding: 2rem;
+      font-size: 30px;
+    }
+
+    iframe {
+      border-radius: 1rem;
+    }
+  </style>
 </html>
